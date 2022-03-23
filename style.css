@@ -18,6 +18,16 @@ body {
     background: #eceff1;
 }
 
+canvas {
+  display: block;
+}
+.chiqui{
+  max-width:100px;
+  height:auto;
+  position:absolute;
+  top:0;
+  right:0;
+}
 
 header, footer {
     width: 90vw;
