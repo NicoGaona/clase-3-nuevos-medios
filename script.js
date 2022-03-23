@@ -1,8 +1,8 @@
 var elEncabezado = document.querySelector("header");
-var elColor, starWars;
+var elColor, pokemon;
 
 function preload() {
-    starWars = loadJSON("https://swapi.dev/api/people/?format=json");
+    pokemon = loadJSON("https://pokeapi.co/api/v2/pokemon/");
 }
 
 function setup() {
@@ -17,6 +17,7 @@ function setup() {
     var descarga = select("#borra");
     descarga.mousePressed(borrador);
     createElement("h1", "Podrías dibujar a <span>" + random(lasOpciones) + "</span>").parent(elEncabezado).id("title");
+    createImg(random(lasOpciones),"holi").addClass("chiqui");
     createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
     background("#eceff1");
     elColor = createColorPicker("#555555").parent("controles");
